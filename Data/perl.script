@@ -1,0 +1,11 @@
+#!/usr/bin/perl -w
+print "whats up?";
+
+    while (defined($oldname = <*.txt>)) {
+      $newname = $oldname;
+      $newname =~  s/_010/_10/;
+      $newname =~  s/-270208//;
+      rename($oldname, $newname);
+      print join($newname,"","\n");
+    }
+
